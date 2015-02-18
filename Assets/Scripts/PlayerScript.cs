@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
+	
 
 	// Use this for initialization
 	void Start () {
@@ -13,26 +14,48 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		// saut
-		if (Input.GetKeyUp("space"))
-		{
-			rigidbody2D.velocity = Vector2.zero;
-			rigidbody2D.AddForce(jumpForce);
-		}
+
 		// Mort si on sort de l'écran
 		Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 		if (screenPosition.y > Screen.height || screenPosition.y < 0)
 		{
 			Die();
 		}
+
+		switch (GameModeSelect.instance.gameMode) {
+		case GameMode.CLASSIQUE:
+				// saut
+				if (Input.GetKeyUp("space"))
+				{
+					rigidbody2D.velocity = Vector2.zero;
+					rigidbody2D.AddForce(jumpForce);
+				}
+				break;
+		case GameMode.ARM: 
+				// saut
+				if (Input.GetKeyDown("space"))
+				{
+					
+					rigidbody2D.velocity = Vector2.zero;
+					//rigidbody2D.AddForce(jumpForce);
+					rigidbody2D.gravityScale = 0;
+				}
+				else if(Input.GetKeyUp("space"))
+				{
+					rigidbody2D.velocity = Vector2.zero;
+					//rigidbody2D.AddForce(jumpForce);
+					rigidbody2D.gravityScale = 1;
+				}
+				break;
+		}
+
 	}
-	// mort par collision
+	// mort à la collision
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		Die();
 	}
-
-	//on recomence le jeu
+	
 	void Die()
 	{
 		Application.LoadLevel(Application.loadedLevel);
