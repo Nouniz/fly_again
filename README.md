@@ -7,7 +7,7 @@ Jeu 2D fait avec Unity
 
 Il y a plusieurs modes de jeux :
   
-  1 - CLASSIQUE : affecté par la gravité vous descendez, vous pouvez monter en appuyant la barre d'espace.
+  1 - CLASSIQUE : affecté par la gravité l'avion chute ! Vous pouvez le remonter en appuyant la barre d'espace.
       Les obstacles se génèrent automatiquement et se positionnent aléatoirement en y.
       Il y a 2 types d'obstacles, les montagnes et les bombes.
       On peut détruire une bomme en lui tirant une roquette dessus avec la flèche de droite. 
