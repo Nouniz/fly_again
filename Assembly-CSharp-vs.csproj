@@ -46,11 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\DeplacerBomb.cs" />
      <Compile Include="Assets\Scripts\GameModeSelect.cs" />
      <Compile Include="Assets\Scripts\Generate.cs" />
      <Compile Include="Assets\Scripts\LeapBeahavior.cs" />
      <Compile Include="Assets\Scripts\Obstables.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\fire.cs" />
+     <Compile Include="Assets\Scripts\translateAndDesapear.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
