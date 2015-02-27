@@ -1,4 +1,4 @@
-# fly Again
+# Fly Again
 Jeu 2D développé avec Unity
 
 # Game play
