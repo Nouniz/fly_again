@@ -14,7 +14,7 @@ public class fire : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log(other.gameObject.name);
+		//Debug.Log(other.gameObject.name);
 		if (other.gameObject.name == "bomb(Clone)") {
 			Instantiate (Resources.Load("explose"), other.gameObject.transform.position, other.gameObject.transform.rotation);
 			Destroy (other.gameObject);

@@ -4,6 +4,7 @@ using Leap;
 
 public class LeapBeahavior : MonoBehaviour {
 
+	//public GameObject rocket;
 	public Vector3 positionMain;
 	public Vector2 jumpForce = new Vector2(0, 10);
 
@@ -24,6 +25,10 @@ public class LeapBeahavior : MonoBehaviour {
 		HandList hands = frame.Hands;
 		Vector mainDroite = hands.Rightmost.PalmPosition;
 
+		/*
+		FingerList doigts = frame.Fingers;
+		Finger index = doigts[0];
+		*/
 		Vector3 mainDroiteV3 = ConvertVectorToVector3(mainDroite);
 		if (hands.Count == 1) {
 			switch (GameModeSelect.instance.gameMode) {
@@ -32,7 +37,18 @@ public class LeapBeahavior : MonoBehaviour {
 					rigidbody2D.velocity = Vector2.zero;
 					rigidbody2D.AddForce (jumpForce);
 				}
-				jumpLimit = Mathf.SmoothDamp (jumpLimit, mainDroiteV3.y, ref jumpLimitRateOfChange, 1f);  
+				jumpLimit = Mathf.SmoothDamp (jumpLimit, mainDroiteV3.y, ref jumpLimitRateOfChange, 1f);
+				/*
+				if (doigts.Count> 0)
+				{
+					if(index.Length > 45)
+					{
+						rocket.transform.position = transform.position + Vector3.right * 2;
+						Instantiate(rocket);
+					}
+
+				} 
+				 */
 				break;
 			case GameMode.ARM:
 				if (mainDroiteV3.y > 100) {
