@@ -1,24 +1,16 @@
 # fly Again
-Jeu 2D fait avec Unity
+Jeu 2D développé avec Unity
 
-# Modes de jeu
+# Game play
 
-  Se choisi sur le GameObject nommé config
+Fly Again est un jeu 2D qui s’inspire du célèbre jeu mobile Flappy Bird. Le joueur doit deplacer verticalement un avion tout en évitant plusieurs types d’obstacles. 
+Fly Again est destiné à être jouer à l’aide de l’appareil Leap Motion. Le leap motion permettra d’enregistrer les mouvements du bras du joueur et ajoutera la dimension thérapeutique au jeu. 
 
-Il y a plusieurs modes de jeux :
-  
-  1 - CLASSIQUE : affecté par la gravité l'avion chute ! Vous pouvez le remonter en appuyant la barre d'espace.
-      Les obstacles se génèrent automatiquement et se positionnent aléatoirement en y.
-      Il y a 2 types d'obstacles, les montagnes et les bombes.
-      On peut détruire une bomme en lui tirant une roquette dessus avec la flèche de droite. 
-  
-  2 - ARM : affecté par la gravité vous descendez, il faut rester appuyé sur la barre d'espace pour maintenir sa position. 
-  Lorsque vous relachez la barre d'espace vous tombez.
+A la place de proposer des niveaux différents, Fly Again propose deux modes de jeu : 
 
-# LEAP MOTION
+  1 - Le mode classique : L’avion est affecté par la gravité et le joueur doit faire un mouvement “Haut / Bas” avec son bras  afin de maintenir l’avion en mouvement. 
+  En cas d'absence de la Leap motion, le joueur doit appuyer  sur la barre espace.
 
-Le jeu peut se jouer avec la leap motion. Les 2 modes de jeux restent accessibles. 
+  2 - Le mode ARM : Le joueur doit maintenir le bras tendu afin d’éviter que l’avion cède à la force de gravité qui lui est appliqué.
 
-  1 - CLASSIQUE : vous devez positioner votre main au dessus du capteur à plus de 10 cm pour faire monter l'avion. En dessous de 10 cm l'avion retombe. Il faut donc monter et descendre simultanément la main afin de maintenir l'avion.
-  
-  2 - ARM : il faut garder la main en hauteur (plus de 10 cm du capteur) pour maintenir l'avion à sa position, dès qu'on enlève la main ou qu'on est en dessous de 10 cm, l'avion retombe.
+Dans les deux modes de jeu, différents obstacles sont générés de manière aléatoire. Ces obstacles ajoutent un aspect ludique au jeu mais permettent également de varier la fréquence  des mouvements réalisés par le patient.  
